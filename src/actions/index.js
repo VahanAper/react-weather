@@ -10,8 +10,6 @@ export function fetchWeather(city) {
   const url = `https://samples.openweathermap.org/data/2.5/forecast?q=${city},us&mode=json&appid=b1b15e88fa797225412429c1c50c122a1`;
   const request = axios.get(url);
 
-  console.log('Request: ', request);
-
   return {
     type: FETCH_WEATHER,
     payload: request
