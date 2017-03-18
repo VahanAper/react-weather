@@ -6,7 +6,7 @@ import Map from '../components/Map';
 class WeatherList extends Component {
   renderWeather(data, index) {
     const temperatures = data.list.map((row) => {
-      return row.main.temp;
+      return row.main.temp - 273;
     });
     const pressures = data.list.map((row) => {
       return row.main.pressure;
